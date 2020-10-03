@@ -9,12 +9,16 @@ data.forEach(ufoSighting => console.log(ufoSighting));
 
 // // Step 2:  Use d3 to append one table row `tr` for each weather report object
 // Don't worry about adding cells or text yet, just try appending the `tr` elements.
-data.forEach(ufoSighting => {
-  console.log(ufoSighting);
-  let row = tbody.append("tr");
-});
+function loadData(data) {
+  data.forEach(ufoSighting => {
+    console.log(ufoSighting);
+    let row = tbody.append("tr");
+  });
+}
 
-// // // Step 3:  Use `Object.entries` to console.log each weather report value
+loadData(data)
+
+// // // Step 3:  Use `Object.entries` to consol.log each weather report value
 data.forEach(ufoSighting => {
   let row = tbody.append("tr");
   console.log(Object.values(ufoSighting))
@@ -44,6 +48,12 @@ data.forEach(ufoSighting => {
   });
 });
 
+d3.select("#button").on("click", () => {
+  const input = d3.select("#datetime").attr("value")
+})
+
+
+// expected output: true
 // // // BONUS: Refactor to use Arrow Functions!
 // // data.forEach((ufoSighting) => {
 // //   let row = tbody.append("tr");
@@ -52,3 +62,5 @@ data.forEach(ufoSighting => {
 // //     cell.text(value);
 // //   });
 // // });
+
+input
