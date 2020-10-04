@@ -45,12 +45,3 @@ d3.select("#filter-btn").on("click", () => {
 });
 
 
-// expected output: true
-// // // BONUS: Refactor to use Arrow Functions!
-// // data.forEach((ufoSighting) => {
-// //   let row = tbody.append("tr");
-// //   Object.values(ufoSighting).forEach(value => {
-// //     let cell = row.append("td");
-// //     cell.text(value);
-// //   });
-// // });
