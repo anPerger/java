@@ -15,7 +15,8 @@ function loadData(data) {
 
   tbody.selectAll("*").remove()
   data.forEach(ufoSighting => {
-    console.log(ufoSighting);
+    // console.log to make sure all objects were selected
+    // console.log(ufoSighting);
     const row = tbody.append("tr");
     Object.values(ufoSighting).forEach(value => {
       // Append a cell to the row for each value
@@ -28,9 +29,6 @@ function loadData(data) {
 
 loadData(data);
 
-
-
-
 d3.select("#filter-btn").on("click", () => {
   const input = d3.select("#datetime").property("value");
   const filteredData = [];
@@ -41,7 +39,7 @@ d3.select("#filter-btn").on("click", () => {
       filteredData.push(ufoSighting);
     }
   });
-  console.log("weeeee", filteredData);
+  // console.log("weeeee", filteredData);
   loadData(filteredData);
 });
 
