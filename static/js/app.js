@@ -39,6 +39,7 @@ d3.select("#filter-btn").on("click", () => {
       filteredData.push(ufoSighting);
     }
   });
+  
   // console.log("weeeee", filteredData);
   loadData(filteredData);
 });
